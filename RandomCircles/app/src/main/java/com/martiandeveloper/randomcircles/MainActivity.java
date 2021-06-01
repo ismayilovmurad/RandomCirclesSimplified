@@ -35,7 +35,9 @@ public class MainActivity extends AppCompatActivity {
                         ((InputMethodManager) getSystemService(INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
 
                         if (myView != null) activityMainContainerFL.removeView(myView);
-
+                                                                                                                                        // userden inputu alib MyView'e cekmesi ucun gonderdiyimiz yer buradi.
+                                                                                                                                        // Integer.parseInt(activityMainNumberET.getText().toString())
+                                                                                                                                        // Userden alinan inputu ilk once Stringe daha sonra ise Integere ceviririk.
                         myView = new MyView(MainActivity.this, activityMainContainerFL.getWidth(), activityMainContainerFL.getHeight(), Integer.parseInt(activityMainNumberET.getText().toString()));
                         activityMainContainerFL.addView(myView);
 
